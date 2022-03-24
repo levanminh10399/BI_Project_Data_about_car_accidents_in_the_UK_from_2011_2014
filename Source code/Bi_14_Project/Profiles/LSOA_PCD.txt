@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{E328BBF1-5250-41F4-B32B-64FF9B8182CF}" Name="DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB">
+      <DtsConnectionManagerID>DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0585709F-42DA-4670-BF99-4F1545434606}" Name="DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB 1">
+      <DtsConnectionManagerID>DESKTOP-TOL1F2F\MSSQLSERVERBI.BI14LabProjectStageDB 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{A5A8E086-4D0B-4917-AE35-C3B892F218D4}" Name="DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS">
+      <DtsConnectionManagerID>DESKTOP-TOL1F2F\MSSQLSERVERBI.ETL_NDS</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9207C9C9-14B2-4A2A-A773-34B7A707C15D}" Name="LSOA_PCD.txt">
+      <DtsConnectionManagerID>LSOA_PCD.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table Schema="dbo" Table="LSOA_PCD" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table Schema="dbo" Table="LSOA_PCD" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table Schema="dbo" Table="LSOA_PCD" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table Schema="dbo" Table="LSOA_PCD" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table Schema="dbo" Table="LSOA_PCD" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table DataSource="DESKTOP-TOL1F2F\MSSQLSERVERBI" Database="BI14LabProjectStageDB" Schema="dbo" Table="LSOA_PCD" RowCount="2665236" />
+        <Column Name="lsoa11cd" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table DataSource="DESKTOP-TOL1F2F\MSSQLSERVERBI" Database="BI14LabProjectStageDB" Schema="dbo" Table="LSOA_PCD" RowCount="2665236" />
+        <Column Name="pcd7" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table DataSource="DESKTOP-TOL1F2F\MSSQLSERVERBI" Database="BI14LabProjectStageDB" Schema="dbo" Table="LSOA_PCD" RowCount="2665236" />
+        <Column Name="lsoa11cd" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>9</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>10332</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>59601</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>2595303</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table DataSource="DESKTOP-TOL1F2F\MSSQLSERVERBI" Database="BI14LabProjectStageDB" Schema="dbo" Table="LSOA_PCD" RowCount="2665236" />
+        <Column Name="pcd7" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>7</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>2665236</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table DataSource="DESKTOP-TOL1F2F\MSSQLSERVERBI" Database="BI14LabProjectStageDB" Schema="dbo" Table="LSOA_PCD" RowCount="2665236" />
+        <Column Name="lsoa11cd" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>42622</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>L99999999</Value>
+            <Count>6982</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E01033595</Value>
+            <Count>3323</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value />
+            <Count>10332</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E01004763</Value>
+            <Count>3799</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E01002726</Value>
+            <Count>3403</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>M99999999</Value>
+            <Count>6058</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E01032739</Value>
+            <Count>4499</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table DataSource="DESKTOP-TOL1F2F\MSSQLSERVERBI" Database="BI14LabProjectStageDB" Schema="dbo" Table="LSOA_PCD" RowCount="2665236" />
+        <KeyColumns>
+          <Column Name="pcd7" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{0585709F-42DA-4670-BF99-4F1545434606}</DataSourceID>
+        <Table DataSource="DESKTOP-TOL1F2F\MSSQLSERVERBI" Database="BI14LabProjectStageDB" Schema="dbo" Table="LSOA_PCD" RowCount="2665236" />
+        <Column Name="pcd7" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2665236</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
